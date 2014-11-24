@@ -14,12 +14,14 @@
 				<Compiler>
 					<Add option="-std=c++11" />
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-audio-d" />
 					<Add library="sfml-graphics-d" />
 					<Add library="sfml-window-d" />
 					<Add library="sfml-system-d" />
+					<Add directory="lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -44,7 +46,10 @@
 		<Linker>
 			<Add directory="lib" />
 		</Linker>
+		<Unit filename="gameengine.cpp" />
+		<Unit filename="gameengine.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="states/state.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
