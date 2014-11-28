@@ -7,6 +7,10 @@
 
 class IntroState : public State{
 private:
+	sf::Font _font;
+	sf::Text _title;
+	sf::Sprite _sprite;
+	sf::Texture _texture;
 protected:
 	static IntroState* _instance;
 	IntroState(){}
