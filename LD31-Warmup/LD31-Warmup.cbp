@@ -49,6 +49,8 @@
 		<Unit filename="src/gameengine.cpp" />
 		<Unit filename="src/gameengine.h" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/states/gamestate.cpp" />
+		<Unit filename="src/states/gamestate.h" />
 		<Unit filename="src/states/introstate.cpp" />
 		<Unit filename="src/states/introstate.h" />
 		<Unit filename="src/states/state.h" />
