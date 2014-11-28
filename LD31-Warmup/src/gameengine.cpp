@@ -1,21 +1,15 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-
 #include "gameengine.h"
 #include "states/state.h"
-
-//#include "tiles/grasstile.h"
 
 using namespace std;
 
 void GameEngine::init(){
-    _window.create(sf::VideoMode(GAME_WIDTH,GAME_HEIGHT), "Untitled game", sf::Style::Titlebar | sf::Style::Close);
+    _window.create(sf::VideoMode(GAME_WIDTH,GAME_HEIGHT), "LD31-Warmup", sf::Style::Titlebar | sf::Style::Close);
     _window.setFramerateLimit(60);
 
     _running = true;
-
-    //_resource = ResourceManager::instance();
-    //_resource->set_dir("res");
 
     _window.setKeyRepeatEnabled(false);
 }

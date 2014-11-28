@@ -1,6 +1,8 @@
 #ifndef STATE_H
 #define STATE_H
 
+#include "../gameengine.h"
+
 class State {
 private:
 public:

@@ -35,7 +35,6 @@ public:
 	bool is_running() { return _running; }
 	void quit() {
 		_running = false;
-		_window.close();
 	}
 };
 
