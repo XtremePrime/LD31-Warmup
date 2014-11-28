@@ -46,10 +46,12 @@
 		<Linker>
 			<Add directory="lib" />
 		</Linker>
-		<Unit filename="gameengine.cpp" />
-		<Unit filename="gameengine.h" />
-		<Unit filename="main.cpp" />
-		<Unit filename="states/state.h" />
+		<Unit filename="src/gameengine.cpp" />
+		<Unit filename="src/gameengine.h" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/states/introstate.cpp" />
+		<Unit filename="src/states/introstate.h" />
+		<Unit filename="src/states/state.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
