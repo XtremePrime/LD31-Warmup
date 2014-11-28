@@ -5,27 +5,28 @@
 
 using namespace std;
 
-GameState::GameState(){
+GameState* GameState::_instance;
 
+GameState* GameState::instance(){
+	if(_instance == NULL) _instance = new GameState();
+	return _instance;
 }
 
-GameState::~GameState(){
-
-}
-
-void load_image(sf::Image* image, const string& filename){
-	if(!image->loadFromFile(filename)){
-		cout << "Couldn't load image '" << filename << "'" << endl;
-		return;
-	}
-}
 void GameState::init(){
-	load_image(player, "res/img/player.png");
-	load_image(wall, "res/img/wall.png");
+	_p_texture.loadFromFile("res/img/player.png");
+	_player_spr.setTexture(_p_texture);
+	_w_texture.loadFromFile("res/img/wall.png");
+	_wall_spr.setTexture(_w_texture);
+
+	_player_spr.setPosition(250, 250);
+
+	_music.openFromFile("res/music/menu.ogg");
+
+	_music.play();
 }
 
 void GameState::cleanup(){
-	delete player;
+	
 }
 
 void GameState::handle_events(GameEngine* game, sf::Event event){
@@ -37,7 +38,8 @@ void GameState::update(GameEngine* game, sf::Time deltaTime){
 }
 
 void GameState::render(GameEngine* game){
-
+	game->get_window()->draw(_player_spr);
+	game->get_window()->draw(_wall_spr);	
 }
 
 void GameState::pause(){

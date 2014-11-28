@@ -1,18 +1,25 @@
 #ifndef GAMESTATE_H
 #define GAMESTATE_H
 
-#include <SFML/Graphics/Image.hpp>
-#include <SFML/Audio/SoundBuffer.hpp>
+#include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 #include "state.h"
 
-class GameState : State {
+class GameState : public State {
 private:
-	sf::Image* player;
-	sf::Image* wall;
+	sf::Sprite _player_spr;
+	sf::Sprite _wall_spr;
+	sf::Texture _p_texture;
+	sf::Texture _w_texture;
+
+	sf::Music _music;
+protected:
+	static GameState* _instance;
+	GameState(){}
 public:
-	GameState();
-	virtual ~GameState();
+	static GameState* instance();
+    ~GameState(){}
 	void init();
 	void cleanup();
 
