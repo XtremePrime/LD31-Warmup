@@ -13,12 +13,11 @@ GameState* GameState::instance(){
 }
 
 void GameState::init(){
-	_p_texture.loadFromFile("res/img/player.png");
-	_player_spr.setTexture(_p_texture);
+	player = Player();
 	_w_texture.loadFromFile("res/img/wall.png");
 	_wall_spr.setTexture(_w_texture);
 
-	_player_spr.setPosition(250, 250);
+	//_player_spr.setPosition(250, 250);
 
 	_music.openFromFile("res/music/menu.ogg");
 
@@ -30,15 +29,16 @@ void GameState::cleanup(){
 }
 
 void GameState::handle_events(GameEngine* game, sf::Event event){
-
+	player.handle_events(game, event);
 }
 
 void GameState::update(GameEngine* game, sf::Time deltaTime){
-
+	player.update(game, deltaTime);
+    //_sprite.move(_movement * deltaTime.asSeconds());
 }
 
 void GameState::render(GameEngine* game){
-	game->get_window()->draw(_player_spr);
+	player.render(game);
 	game->get_window()->draw(_wall_spr);	
 }
 
