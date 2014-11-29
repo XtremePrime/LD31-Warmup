@@ -57,6 +57,8 @@
 		<Unit filename="src/states/introstate.cpp" />
 		<Unit filename="src/states/introstate.h" />
 		<Unit filename="src/states/state.h" />
+		<Unit filename="src/texturemanager.cpp" />
+		<Unit filename="src/texturemanager.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
