@@ -5,22 +5,20 @@
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
 
-//#include "gamemap.h"
-//#include "resourcemanager.h"
+//#include "texturemanager.h"
 
 class State;
 class GameEngine {
 private:
-    sf::RenderWindow _window;
-    //GameMap _map;
-    //ResourceManager* _resource;
-	bool _running;
 	std::vector<State*> _state_stack;
 	sf::Event _event;
-
+    sf::RenderWindow _window;
+    //TextureManager _tx_mgr;
+	bool _running;
 public:
 	static const int GAME_WIDTH = 640, GAME_HEIGHT = 480;
 	sf::RenderWindow* get_window(){ return &_window; }
+	//TextureManager* get_tx_mgr(){ return &_tx_mgr; }
 	void init();
 	void cleanup();
 

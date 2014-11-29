@@ -5,13 +5,14 @@
 #include <SFML/Audio.hpp>
 
 #include "state.h"
+#include "../texturemanager.h"
 #include "../entities/player.h"
 
 class GameState : public State {
 private:
 	Player player;
-	sf::Sprite _wall_spr;
-	sf::Texture _w_texture;
+	TextureManager _tx_mgr;
+	std::map<std::string, sf::Sprite> _sprites;
 
 	sf::Music _music;
 protected:
