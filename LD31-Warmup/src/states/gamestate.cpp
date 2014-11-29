@@ -21,8 +21,10 @@ void GameState::init()
 	_sprites["wall"].setTexture(_tx_mgr.get_ref("wall"));
 
 	//- Music load+play
-	_music.openFromFile("res/music/menu.ogg");
+	_music.openFromFile("res/music/TheForestAwakes.ogg");
 	_music.play();
+	_music.setLoop(true);
+	_music.setVolume(65);
 }
 
 void GameState::cleanup(){

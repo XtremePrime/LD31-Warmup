@@ -10,7 +10,7 @@ int main()
     GameEngine game;
     game.init();
 
-    game.change_state(IntroState::instance());
+    game.change_state(GameState::instance());
 
     sf::Clock clock;
 

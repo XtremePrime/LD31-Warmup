@@ -4,16 +4,6 @@
 
 #include "texturemanager.h"
 
-TextureManager::TextureManager()
-{
-
-}
-
-TextureManager::~TextureManager()
-{
-
-}
-
 void TextureManager::load_texture(const std::string& name, const std::string& path)
 {
 	sf::Texture tx;

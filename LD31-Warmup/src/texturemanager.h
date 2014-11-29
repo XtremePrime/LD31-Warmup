@@ -10,8 +10,8 @@ private:
 	std::map<std::string, sf::Texture> textures;
 protected:
 public:
-	TextureManager();
-	~TextureManager();
+	TextureManager(){}
+	~TextureManager(){}
 
 	void load_texture(const std::string&, const std::string&);
 	sf::Texture& get_ref(const std::string&);
